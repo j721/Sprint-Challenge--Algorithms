@@ -2,10 +2,11 @@
 
 ## Exercise I
 
-a) Linear O(n) Runtime complexity, the running time or space time will grow linearly (at the same rate) and in direct proportion to input size. Has one loop where n increases linearly.
+a) Linear O(n) Runtime complexity, the running time or space time will grow linearly (at the same rate) and in direct proportion to input size. Has one loop where n increases linearly. One loop where n is being iterated over. 
 
 
-b) O(n^2) for runtime complexity, since there are two loops/iterations taking place over n. 
+b) Quadratic O(n^2) for runtime complexity, since there are two loops/iterations taking place over n. The running time grows linearly and in
+direct proportion to the size of the input data (n) squared. 
 
 
 c) The runtime complexity is constant O(n). Recursion of n in a linear fashion. 
