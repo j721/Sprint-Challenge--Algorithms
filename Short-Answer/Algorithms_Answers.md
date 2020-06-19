@@ -2,7 +2,7 @@
 
 ## Exercise I
 
-a)
+a) Linear O(n) the running time or space time will grow linearly (at the same rate) and in direct proportion to input size. 
 
 
 b)
