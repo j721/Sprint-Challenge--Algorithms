@@ -41,15 +41,19 @@ Your function must utilize recursion. It cannot contain any loops.
 #     #if the first two letters is found in the word array then add count +1
 #     if word[:2] =="th":
 #         count +=1
-#     #return function recursively to find the first word that contains 'th', and the count as well
+#     #call function recursively to return the first index, and the count as well
 #     return count_th(word[1:], count)
 
 
 #2nd method
 def count_th(word):
+    #if length of word has less than 2 letters then return 0
     if len(word) < 2:
       return 0
+    #else if the first two letters has th in its index 
+    #then return +1 for the count_th function and count that as the first index 
     elif word[0:2] == 'th':
         return 1 + count_th(word[1:])
+    #else no 'th' letters found, then just return the count_th function 
     else:
         return count_th(word[1:])
