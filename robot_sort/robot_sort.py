@@ -100,6 +100,27 @@ class SortingRobot:
         pass
 
 
+#U
+#in order for the robot to be able to sort through things, its light switched needs to be turned on
+#there has to be list of things present. At least greater than 1 for the robot to sort
+
+
+#the robot has to pick up the item in front of it
+        #swap item function- The robot swaps its currently held item with the list item in front
+                # of it.
+#robot has to be compare the item when swapping
+
+#after the item has been swapped then the robot is able to move in left to right direction
+    #can_move_right =True
+        #self.move right()
+    #can_move_left = True
+        #self.move left()
+
+
+# P
+# E
+# R#
+
 if __name__ == "__main__":
     # Test our your implementation from the command line
     # with `python robot_sort.py`
