@@ -5,14 +5,12 @@
 a) Linear O(n) Runtime complexity, the running time or space time will grow linearly (at the same rate) and in direct proportion to input size. Has one loop where n increases linearly.
 
 
-b) Still O(n) for runtime complexity, even though there is a nested while loop it is only a comparison between n (input size) and not reiterating over it again. It only reiterates over n once with the for loop.
+b) O(n^2) for runtime complexity, since there are two loops/iterations taking place over n. 
 
 
 c) The runtime complexity is constant O(n). Recursion of n in a linear fashion. 
 
-<!-- Still a little unsure whether O(n) or O(1) -->
 
-<!-- As there is no looping in this function, even when recursion is being used what gets returned back i The runtime or space used remains constant even when the input size changes.  -->
 
 ## Exercise II
 
