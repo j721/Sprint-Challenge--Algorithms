@@ -138,7 +138,8 @@ class SortingRobot:
 #if the robot can't move right anymore, there's nothing left to compare/sort then turn light off
 #else turn light on
 
-# R#
+# R
+#used selection sort #
 
         #first method
         #turn on the robot's light to have the robot running
