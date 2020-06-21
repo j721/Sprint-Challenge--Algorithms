@@ -96,8 +96,126 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
-        pass
+        #U
+#in order for the robot to be able to sort through things, its light switched needs to be turned on
+#there has to be list of things present. At least greater than 1 for the robot to sort
+
+
+#the robot has to pick up the item in front of it
+        #swap item function- The robot swaps its currently held item with the list item in front
+                # of it.
+#robot has to be compare the item when swapping
+#   If the held item's value is greater, return 1.
+#         If the held item's value is less, return -1.
+#         If the held item's value is equal, return 0.
+#         If either item is None, return None.
+
+#after the item has been swapped then the robot is able to move in left to right direction. 
+    #can_move_right =True
+        #self.move right()
+    #can_move_left = True
+        #self.move left()
+
+
+# P
+#propably use of recursion and most likely calling other methods made for the robot
+#going to assume that the robot moves from left to right. 
+#go right to go forwards
+#go left to go backwards
+# E
+#while light is on, the robot can pick up an item
+#and robot can start by moving forwards (right)
+#need to pick up item in front of robot and compare it with the other item
+#the item can be swapped once the one in hand has a greater value than the one in the list
+#continue this process of going right to sort through any other items that need to be swapped
+
+#if there are any items that are remaining, then we can move to the left
+    #and repeat the same process of comparing and swapping items
+
+    #continue the loop
+
+#to exit out of the loop- need to turn of light with a condition
+#if the robot can't move right anymore, there's nothing left to compare/sort then turn light off
+#else turn light on
+
+# R
+#used selection sort #
+
+        #first method
+        #turn on the robot's light to have the robot running
+        self.set_light_on()
+
+        #while light is on, then able to pick up the item in front of it
+        while self.light_is_on():
+            self.swap_item()
+            #while the robot is moving to the right with the item to be compared/swapped in hand
+            while self.can_move_right():
+                self.move_right()
+                #compare the items. Swap if the value of the item being held is greater than the one on the list
+                if self.compare_item() ==1:
+                    self.swap_item()
+            #move to the left if there are still items remaining to be compared
+            while self.can_move_left() and self.compare_item() !=None:
+                self.move_left()
+            #continue with loop of swaping and comparing items, moving to the right again if the item value in hand is greater. (direction left to right)    
+            self.swap_item()
+            self.move_right()
+
+            #if the robot can't move right anymore then turn light off. If there's nothing else left to compare
+            if not self.can_move_right():
+                self.set_light_off()
+            #else keep light turned on 
+            else:
+                self.set_light_on()
+        
+
+        #2nd method
+
+        #assumption: light is already on
+        #if the robot is at the end of the list then it will return false, and we can't move right
+        #return back the list
+
+        # if self.can_move_right() is False:
+        #     return self._list
+        # #while light is on, robot is able to pick up item in front of it
+        # self.swap_item()
+        # #while light is one, robot can move right and compare the one in hand vs. one on the list
+        # while self.can_move_right() is True:
+        #     self.move_right()
+        # #if item in hand has greater value than swap item
+        #     if self.compare_item() ==1:
+        #         self.swap_item()
+        # #we are able to move left, if there are any items remaining on the list
+        # while self.can_move_left() is True:
+        #     self.move_left()
+        #     #if there is nothing left to compare and swap then break and go back to loop again
+        #     if self.compare_item() == None:
+        #         self.swap_item()
+        #         break
+        # #move right again and recursively call the function to repeat the loop
+        # self.move_right()
+        # self.sort()
+
+
+
+        # while self.can_move_right():
+        #     self.swap_item()
+
+        #     while self.can_move_right():
+        #         self.move_right()
+
+        #         if self.compare_item() ==1:
+        #             self.swap_item()
+        
+        # while self.can_move_left() and self.compare_item() !=None:
+        #     self.move_left()
+        
+        # self.swap_item()
+        # self.move_right()
+
+
+      
+
 
 
 if __name__ == "__main__":
